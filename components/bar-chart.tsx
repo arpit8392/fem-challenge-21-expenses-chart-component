@@ -45,14 +45,14 @@ const ExpenseBarChart = () => {
 			<h1 className='text-darkBrown text-2xl font-bold lg:text-3xl'>
 				Spending - Last 7 Days
 			</h1>
-			<div className='mt-14 lg:mt-16'>
-				<ResponsiveContainer width='100%' height={250}>
+			<div className='mt-14 lg:mt-16 w-full h-[180px]'>
+				<ResponsiveContainer width='100%' height='100%'>
 					<BarChart data={data}>
 						<XAxis
 							dataKey='day'
-							fontSize={12}
 							tickLine={false}
 							axisLine={false}
+							className='text-xs lg:text-sm text-mediumBrown'
 						/>
 						<Tooltip content={<CustomTooltip />} />
 						<Bar
